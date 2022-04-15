@@ -1,5 +1,6 @@
 import './bootstrap.min.css';
 import './App.css';
+
 import EmotionTable from './EmotionTable.js';
 import React from 'react';
 
@@ -49,9 +50,9 @@ class App extends React.Component {
         let output = data.label;
         let color = "white"
         switch(output) {
-          case "positive": color = "black";break;
-          case "negative": color = "black";break;
-          default: color = "black";
+          case "positive": color = "green";break;
+          case "negative": color = "red";break;
+          default: color = "yellow";
         }
         output = <div style={{color:color,fontSize:20}}>{output}</div>
         this.setState({sentimentOutput:output});
